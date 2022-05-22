@@ -8,10 +8,12 @@
     display: flex;
     justify-content: space-between ;
     align-items: center;
-    column-gap: 14rem;
+    column-gap: 10rem;
     text-align: center;
     background-color: #36013f;
+    max-width: 100%;
     min-height: 70px;
+    width: 100%;
 }
 
 .logo-container img{
@@ -24,10 +26,13 @@
 .navbar-container{
     display: flex;
     justify-content: space-between;
-    margin-left: 0;
+    margin-left: 0px;
     padding: 10px;
     align-items: center;
     column-gap: 3rem;
+    max-width: 100%;
+    overflow: hidden;
+    
 }
 
 .navbar-container a{
@@ -37,6 +42,8 @@
     transition: 0.7s ease;
     font-family: 'Roboto Flex', sans-serif;
     font-weight: 400;
+    font-size: 15px;
+    max-width: 100%;
 }
 
 .navbar-container a:hover{
@@ -46,16 +53,29 @@
 .hamburger{
     display: none;
     cursor: pointer;
+    background-color:#36013f;
+    border: none;
 }
 
+
 .bar{
-    display: block;
+    display: none;
     width:25px;
     height: 6px;
     margin: 5px;
     -webkit-transition: all 0.3s ease-in-out;
     transition:  all 0.3s ease-in-out ;
     background-color:#fdf2fe;
+    color:#fdf2fe
+    
+}
+
+.col-md-12{
+    padding-top: 1em;
+}
+
+.form-control{
+    border-radius: 20px;
     
 }
 
@@ -79,6 +99,7 @@
     }
 
     .navbar-container{
+        overflow: hidden;
         position: fixed;
         left: -150%;
         top: 80px;
@@ -93,23 +114,28 @@
         transition: 0.4s;
         padding-top: 20px;
         padding-bottom: 5px;
-        row-gap: 25px;
+        row-gap: 30px;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         z-index: 100;
         
+    }
+    .bar{
+        display: block;
     }
 
     .nav-item{
         margin: 16px, 0;
         padding: 30px;
+
     }
 
     .navbar-container.active{
         left: 0;
+        overflow: hidden;
 
     }
     
-    
+   
     
     .wrapper{
         padding: 0;
